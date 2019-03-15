@@ -1,0 +1,19 @@
+{
+  "name": "lift",
+  "version": "1.0.0",
+  "description": "An application to store and view lift statistics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrionRiitters/lift.git"
+  },
+  "author": "Orion McCoy-Riitters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OrionRiitters/lift/issues"
+  },
+  "homepage": "https://github.com/OrionRiitters/lift#readme"
+}
