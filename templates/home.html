@@ -2,10 +2,24 @@
 <html lang="en">
     <head>
         <title>Lift</title>
-        <meta charset="utf-8 " name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
     </head>
     <body>
-        <h1>{{ dict['crumb'] }}</h1>
+        <div class="grid-container app-container">
+            <div class="item-1">
+                <button id="btn-1" type="button" class="btn btn-dark btn-lg btn-block">Start Workout</button>
+            </div>
+            <div class="item-2">
+                <button id="btn-2" type="button" class="btn btn-dark btn-lg btn-block">View Stats</button>
+            </div>
+            <div class="item-3">
+                <button id="btn-3" type="button" class="btn btn-dark btn-lg btn-block">Create New</button>
+            </div>
+        </div>
+        <script async src="{{ url_for('static', filename='js/home.js') }}"></script>
     </body>
 </html>
