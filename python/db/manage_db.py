@@ -154,5 +154,59 @@ def add_lifts_days_association(db, cur, values):
         (values['liftID'], values['dayID'])
         )
 
-def query_programs:
-    return None
+@open_close_connection
+def query_workouts(db, cur, values):
+    """
+    Queries a row from programs table
+    """
+    with db:
+        cur.execute("""
+        SELECT * FROM workouts
+        WHERE rowid = (?)
+        """,
+        ([values['rowid']])
+        )
+
+    row = cur.fetchone()
+    if row:
+        return row['name']
+    else:
+        return None
+
+@open_close_connection
+def query_lifts(db, cur, values):
+    """
+    Queries a row from lifts table
+    """
+    with db:
+        cur.execute("""
+        SELECT * FROM lifts
+        WHERE rowid = (?)
+        """,
+        ([values['rowid']])
+        )
+
+    row = cur.fetchone()
+    if row:
+        return row['name']
+    else:
+        return None
+
+@open_close_connection
+def query_days(db, cur, values):
+    """
+    Queries a row from days table
+    """
+    with db:
+        cur.execute("""
+        SELECT * FROM days
+        WHERE rowid = (?)
+        """,
+        ([values['rowid']])
+        )
+
+    row = cur.fetchone()
+    if row:
+        return row['name']
+    else:
+        return None

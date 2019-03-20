@@ -34,3 +34,8 @@ class DBHandler():
 
     def selector(self, template):
         return None
+
+
+    def query_all_workouts():
+        
+        while 
