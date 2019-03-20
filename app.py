@@ -1,20 +1,14 @@
 from flask import Flask, render_template, send_from_directory, url_for
+from python.db_handler import DBHandler
 
 app = Flask(__name__)
+db_handler = DBHandler()
 
 @app.route('/', methods=['GET'])
 def home():
-    dict = {'crumb': 'Yes'}
-    return render_template('home.html', dict=dict)
+    return render_template('home.html')
 
 @app.route('/templates/<template>', methods=['GET'])
 def start_workout(template):
-    return render_template(template)
-
-#@app.route('/public/css/<file>', methods=['GET'])
-#def serve_css(file):
-#    return send_from_directory('public/css', file)
-#
-#@app.route('/node_modules/bootstrap/dist/css/<file>', methods=['GET'])
-#def serve_bootstrap(file):
-#    return send_from_directory('node_modules/bootstrap/dist/css', file)
+    db_handler.selector(template)
+    return render_template(template, dict=dict)

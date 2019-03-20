@@ -153,3 +153,6 @@ def add_lifts_days_association(db, cur, values):
         """,
         (values['liftID'], values['dayID'])
         )
+
+def query_programs:
+    return None

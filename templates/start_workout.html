@@ -1,6 +1,12 @@
 <div class="grid-container app-container">
     <div class="item-1">
-        <button id="btn-1" type="button" class="btn btn-dark btn-lg btn-block">Start asdf</button>
+        <p>Program</p>
+        <select name="program">
+            {% for item in programs %}
+            <option value="{{ item.name }}">{{ item.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
     </div>
     <div class="item-2">
         <button id="btn-2" type="button" class="btn btn-dark btn-lg btn-block">View Stats</button>
