@@ -1,3 +1,8 @@
+/*
+ * When viewing website on a laptop, use static height/width
+ * (So I can view the app on my laptop and not ned to update 
+ * the server all the time).
+ */
 @media only screen and (max-height: 100vw) and (min-width: 100vh) {
     .grid-container {
         display: grid;
@@ -8,6 +13,7 @@
     }
 }
 
+/* When viewing on a phone or tablet, base app's height/width on vh/vw. */
 @media only screen and (min-height: 100vw) and (max-width: 100vh) {
 .grid-container {
         display: grid;
@@ -18,7 +24,10 @@
     }
 }
 
-
+/*
+ * Use CSS Grid to divide page into 3 rows, and divide those
+ * rows into 4 rows each.
+*/
 .item-1 {
     grid-row: 1 / 2;
     display: grid;
@@ -36,7 +45,7 @@
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
-
+/* Positions of buttons will be rows 2 and 3 their parents (item-1 - item-3) */
 button {
     grid-row: 2/4;
     background-color: #dfdfdf;

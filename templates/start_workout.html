@@ -1,6 +1,7 @@
 <div class="grid-container app-container">
     <div class="item-1">
         <p>Program</p>
+        <!-- for item in programs list, create an option from the item value -->
         <select name="program">
             {% for item in programs %}
             <option value="{{ item.name }}">{{ item.name }}</option>

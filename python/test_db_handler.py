@@ -6,9 +6,4 @@ module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 DBHandler = module.DBHandler()
 
-print(DBHandler)
-take_one = DBHandler.get_instance()
-take_two = DBHandler.get_instance()
-
-print(take_one)
-print(take_two)
+DBHandler.query_all_rows('lifts')
